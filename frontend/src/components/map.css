@@ -1,0 +1,193 @@
+/* Premium Glassmorphic Map Controls & Visual Styles */
+.premium-map-wrap {
+  position: relative;
+  height: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(16, 44, 40, 0.08);
+  border: 1px solid rgba(22, 78, 64, 0.12);
+}
+
+.map-glass-controls {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 500;
+  max-width: min(380px, calc(100% - 28px));
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 12px 32px rgba(15, 41, 34, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-glass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.glass-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #133e31;
+  letter-spacing: 0.3px;
+}
+
+.pollutant-filter-pills {
+  display: flex;
+  gap: 4px;
+  background: #f1f5f3;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.filter-pill {
+  border: 0;
+  background: transparent;
+  color: #526b62;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.filter-pill:hover {
+  color: #133e31;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.filter-pill.active {
+  background: #144e3d;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(20, 78, 61, 0.25);
+}
+
+.layer-toggle-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #4b6359;
+  background: #f8faf8;
+  border: 1px solid #e2ece5;
+  border-radius: 6px;
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  user-select: none;
+}
+
+.toggle-btn:hover {
+  background: #edf4ef;
+  border-color: #cbdcd0;
+}
+
+.toggle-btn.active {
+  background: #184b3d;
+  color: #ffffff;
+  border-color: #184b3d;
+  box-shadow: 0 2px 6px rgba(24, 75, 61, 0.2);
+}
+
+.epa-aqi-scale {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  padding-top: 8px;
+  border-top: 1px solid #edf2ee;
+}
+
+.scale-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.scale-swatch {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.scale-range {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #64748b;
+  text-align: center;
+}
+
+.fire-pin-pulsing {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fire-core {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 4px rgba(239, 68, 68, 0.6);
+  z-index: 2;
+}
+
+.fire-glow {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.35);
+  animation: fireGlowPulse 1.8s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes fireGlowPulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+}
+
+.premium-map-popup .leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(15, 38, 31, 0.16);
+  border: 1px solid rgba(22, 78, 64, 0.12);
+  color: #1e293b;
+}
+
+.premium-map-popup .leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.97);
+}
